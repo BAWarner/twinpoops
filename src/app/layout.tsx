@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Best Managed Movie List",
   description: "So no one can complain about how bad it is managed again",
+  robots: 'noindex, nofollow'
 };
 
 export default function RootLayout({
