@@ -31,14 +31,14 @@ const authenticateUser = async  (): Promise<number | null | NextResponse> => {
     return userInfo.id;
 };
 
-export async function POST(req: NextRequest){
+export async function POST(req: NextRequest): Promise<NextResponse>{
 
     const { movie } = await req.json();
     const { title, id: tmdb_id, overview, poster_path, genre_ids, release_date, backdrop_path, mo } = movie;
 
     const currentUserID = await authenticateUser();
 
-    if( Number.isNaN(currentUserID) ) return currentUserID;
+    if( Number.isNaN(currentUserID) ) return NextResponse.json({ message: 'Invalid, or expired token' }, {status: 401});
 
     try{
 
