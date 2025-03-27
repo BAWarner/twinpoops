@@ -1,0 +1,63 @@
+.dashboard{
+    width: 100%;
+}
+
+.dashboard .filtersWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+.dashboard .left .filters{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.dashboard .right{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.dashboard .slideFilters{
+    flex-basis: 100%;
+}
+
+.dashboard .closed{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.dashboard .open{
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
+.dashboard .gridView img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.dashboard .scrollerView img{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.dashboard .requestFormWrapper{
+    text-align: right;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1099px) {
+    .dashboard .filtersWrapper{
+        flex-wrap: wrap;
+    }
+    .dashboard .slideFilters{
+        padding-top: 30px;
+    }
+}
