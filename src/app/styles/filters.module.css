@@ -1,0 +1,43 @@
+.filtersForm{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.filtersForm label{
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 10px;
+    min-width: 80px;
+    max-width: fit-content;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+    border-radius: 6px;
+}
+
+.filtersForm label:has(input:checked){
+    transition: all 0.25s ease-in-out;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.filtersForm div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bolder;
+}
+
+.filtersForm input{
+    visibility: hidden;
+    margin-left: -13px;
+}
+
+@media screen and (max-width: 1099px) {
+    .filtersForm div{
+        flex-wrap: wrap;
+    }
+}

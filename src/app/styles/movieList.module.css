@@ -1,0 +1,195 @@
+.listContainer{
+    width: 100%;
+    max-width: 1770px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.scroller .scrollContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollContainer ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.scroller .scrollContainer ul{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+}
+
+.grid .scrollContainer ul{
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.scrollContainer ul li{
+    flex-shrink: 0;
+    width: 300px;
+    height: 445px;
+    max-height: 445px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.scrollContainer ul li:hover {
+    transform: scale(1.05);
+}
+.grid .scrollContainer ul li:hover {
+    transform: scale(1.01);
+}
+
+.scrollContainer .poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.showOnHover{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.showOnHover p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.listContainer ul li:hover .showOnHover{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.row{
+    flex-basis: 100%;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: flex-start;
+}
+
+.row:not(:first-of-type){
+    margin-top: 60px;
+}
+
+
+.listContainer .poster{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.listContainer h2{
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.listContainer h2 span{
+    color: #777777;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.listContainer .movieTitle{
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.listContainer .userWrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.listContainer .userWrapper p:first-of-type{
+    font-weight: bolder;
+    flex-basis: 100%;
+}
+
+
+.movieListSmall .poster{
+    width: 100%;
+    height: 466px;
+    object-fit: cover;
+    aspect-ratio: auto 652 / 979;
+
+}
+.movieListSmall span{
+    display: block;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.movieListSmall p{
+    max-height: 300px; 
+    overflow-x: scroll;
+}
+
+@media screen and (max-width: 1099px) {
+    .scrollContainer ul li{
+        width: 150px;
+        height: 222.5px;
+        max-height: 222.5px;
+    }
+    .listContainer ul li:hover .showOnHover,
+    .showOnHover,
+    .showOnHover:hover{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .scrollContainer ul li:hover,
+    .grid .scrollContainer ul li:hover{
+        transform: unset;
+    }
+    .grid .scrollContainer ul{
+        gap: 35px;
+    }
+
+    .movieListSmall .poster{
+        height: 290px;
+    }
+    .movieListSmall p{
+        display: none;
+    }
+       
+}
