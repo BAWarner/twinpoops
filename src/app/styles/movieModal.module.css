@@ -1,0 +1,144 @@
+.movieModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalDetails{
+    width: 50%;
+    background-color: var(--black);
+    height: fit-content;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+}
+
+.modalDetails h3{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.modalDetails .close{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    display: block;
+    background-color: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.modalDetails p{
+    font-size: 14px;
+}
+.modalDetails .left{
+    flex-basis: 50%;
+    padding-right: 15px;
+}
+.modalDetails .right{
+    flex-basis: 50%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.modalDetails .right img{
+    max-width: 100%;
+    height: 385px;
+}
+
+.modalDetails .bottom{
+    flex-basis: 100%;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalDetails .bottom .remove{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.modalDetails .bottom .remove img{
+    width: 25px;
+}
+
+.modalDetails .categoryRow span{
+    font-style: italic;
+}
+
+
+@media screen and (max-width: 1099px) {
+    .modalDetails{
+        width: 75%;
+    }
+    .modalDetails .left{
+        flex-basis: 100%;
+        order: 2;
+        max-height: 250px;
+        overflow-x: scroll;
+        padding-top: 10px;
+        padding-right: 0;
+    }
+    .modalDetails .left h3{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .modalDetails .right{
+        flex-basis: 100%;
+        padding-left: 0;
+        order:1;
+    }
+    .modalDetails .bottom{
+        order:3;
+    }
+    .modalDetails .right img{
+        max-width: 100%;
+        height: 222.5px;
+    }
+}
+
+.modalDetails .confirmation{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    width: 300px;
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.modalDetails .confirmation span{
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.modalDetails .confirmation button{
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--red);
+    border-color: var(--red);
+}

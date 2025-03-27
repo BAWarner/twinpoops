@@ -1,0 +1,80 @@
+:root {
+  --black: #191919;
+  --white: #FAF0E6;
+  --gray: #31363F;
+  --blue: #2D4263;
+  --red: #C84B31;
+  --cream: #ECDBBA;
+  --background: var(--black);
+  --foreground: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--black);
+    --foreground: var(--white);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.full-width{
+  width: 100%;
+}
+
+img{
+  max-width: 100%;
+}
+
+button,
+.button{
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+    cursor: pointer;
+    border: 3px solid var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+}
+
+button.secondary,
+.button.secondary{
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+svg,
+svg path{
+  transition: fill 0.1s ease-in-out;
+  cursor: pointer;
+}
